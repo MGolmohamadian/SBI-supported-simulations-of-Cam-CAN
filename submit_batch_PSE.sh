@@ -30,13 +30,13 @@ FCD_file_pattern="${FCD_dir}/{subject}/{subject}_{noise}_{G}_{dt}_FCD.txt"
 log_dir="${SUBMISSION_SCRIPT_DIR}/logs"
 
 # Parameter ranges
-G_start=1.65
-G_end=2.05
-num_G=5
+G_start=1.89
+G_end=2.21525
+num_G=2000
 
-noise_start=0.02
-noise_end=0.05
-num_noise=4
+noise_start=0.04
+noise_end=0.04
+num_noise=1
 
 dt=0.005
 
