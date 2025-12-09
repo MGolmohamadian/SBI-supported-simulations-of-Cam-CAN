@@ -1,0 +1,236 @@
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 118, in _post_bind_validate
+    hash(self.default)
+TypeError: unhashable type: 'dict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 393, in doRollover
+    os.remove(dfn)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 5, in <module>
+    import montbrio_simulation
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 3, in <module>
+    import showcase1_ageing as utils
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/__init__.py", line 2, in <module>
+    from .phase_plane import phase_plane_interactive
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/phase_plane.py", line 6, in <module>
+    from tvb.simulator.lab import integrators
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/lab.py", line 57, in <module>
+    from tvb.simulator import (simulator, models, coupling, integrators, monitors, noise)
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 49, in <module>
+    from tvb.simulator import models, integrators, monitors, coupling
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/monitors.py", line 60, in <module>
+    from tvb.datatypes.time_series import (TimeSeries, TimeSeriesRegion, TimeSeriesEEG, TimeSeriesMEG, TimeSeriesSEEG,
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/time_series.py", line 44, in <module>
+    class TimeSeries(HasTraits):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 121, in _post_bind_validate
+    'Consider using a lambda as a value factory \n   attribute {}'.format(self))
+Message: "Field seems mutable and has a default value. Consider using a lambda as a value factory \n   attribute tvb.datatypes.time_series.TimeSeries.labels_dimensions = Attr(field_type=<class 'dict'>, default={}, required=True)"
+Arguments: ()
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.903016504 dt=0.005, Result=[0.001356705268185063, 0.0865415628776477, 7.7493945589159345, 45.80919528007507]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9031792103 dt=0.005, Result=[0.0006649869906719363, 0.15564490216450974, 10.347134722900833, 45.430474281311035]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9033419166 dt=0.005, Result=[0.0009482794921815494, 0.0967125328505579, 10.159086444388102, 45.134949922561646]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9035046229 dt=0.005, Result=[0.0012435194438495112, 0.10188054802648969, 2.955343106881031, 45.79743146896362]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9036673292 dt=0.005, Result=[0.0006932271840114368, 0.1628171946402097, 8.173294183890885, 45.95288944244385]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9038300355 dt=0.005, Result=[0.0006879227433165064, 0.14202177354759224, 5.550616406959428, 45.57046699523926]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9039927418 dt=0.005, Result=[0.0012133639144827517, 0.1337790923932411, 4.594636109910541, 45.5531108379364]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9041554481 dt=0.005, Result=[0.0007325712084129937, 0.1618974668651105, 9.966875695347289, 45.09817337989807]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9043181544 dt=0.005, Result=[0.0013980185466388362, 0.1596677595696582, 6.33980156040902, 45.435791969299316]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9044808607 dt=0.005, Result=[0.000990112720170708, 0.17699705429341372, 8.104177216259057, 45.1810564994812]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.904643567 dt=0.005, Result=[0.0007256224818133657, 0.044102557096072074, 4.20140254250366, 43.72877764701843]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9048062733 dt=0.005, Result=[0.001066502867429073, 0.04682267518213498, 3.624570465017843, 43.63177037239075]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9049689796 dt=0.005, Result=[0.0008691239254819701, 0.07934564739549266, 5.62915974671065, 43.75697040557861]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9051316859 dt=0.005, Result=[0.0018518387805125688, 0.09352055755033704, 2.794094315875423, 43.151400327682495]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9052943922 dt=0.005, Result=[0.0013807120724044079, 0.1348635386700008, 4.091035146270716, 43.373348236083984]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9054570985 dt=0.005, Result=[0.0013050626184510218, 0.20652085780246218, 3.872966803265779, 43.37188172340393]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9056198048 dt=0.005, Result=[0.0012352569054577527, 0.14605988607977183, 4.567212871156155, 43.305158376693726]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9057825111 dt=0.005, Result=[0.0006472015576890905, 0.03652235456271838, 9.404780783577007, 43.36532640457153]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9059452174 dt=0.005, Result=[0.0014282602934223136, 0.0424427029525807, 6.139137167752825, 43.14004564285278]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=1.9061079237 dt=0.005, Result=[0.0006421167685963506, 0.06609819648174145, 4.722824418874367, 42.86519765853882]

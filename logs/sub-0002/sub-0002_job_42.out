@@ -1,0 +1,948 @@
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 118, in _post_bind_validate
+    hash(self.default)
+TypeError: unhashable type: 'dict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 394, in doRollover
+    self.rotate(self.baseFilename, dfn)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 111, in rotate
+    os.rename(source, dest)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log' -> '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 5, in <module>
+    import montbrio_simulation
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 3, in <module>
+    import showcase1_ageing as utils
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/__init__.py", line 2, in <module>
+    from .phase_plane import phase_plane_interactive
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/phase_plane.py", line 6, in <module>
+    from tvb.simulator.lab import integrators
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/lab.py", line 57, in <module>
+    from tvb.simulator import (simulator, models, coupling, integrators, monitors, noise)
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 49, in <module>
+    from tvb.simulator import models, integrators, monitors, coupling
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/monitors.py", line 60, in <module>
+    from tvb.datatypes.time_series import (TimeSeries, TimeSeriesRegion, TimeSeriesEEG, TimeSeriesMEG, TimeSeriesSEEG,
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/time_series.py", line 44, in <module>
+    class TimeSeries(HasTraits):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 121, in _post_bind_validate
+    'Consider using a lambda as a value factory \n   attribute {}'.format(self))
+Message: "Field seems mutable and has a default value. Consider using a lambda as a value factory \n   attribute tvb.datatypes.time_series.TimeSeries.labels_dimensions = Attr(field_type=<class 'dict'>, default={}, required=True)"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 118, in _post_bind_validate
+    hash(self.default)
+TypeError: unhashable type: 'dict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 393, in doRollover
+    os.remove(dfn)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 5, in <module>
+    import montbrio_simulation
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 3, in <module>
+    import showcase1_ageing as utils
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/__init__.py", line 2, in <module>
+    from .phase_plane import phase_plane_interactive
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/phase_plane.py", line 6, in <module>
+    from tvb.simulator.lab import integrators
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/lab.py", line 57, in <module>
+    from tvb.simulator import (simulator, models, coupling, integrators, monitors, noise)
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 49, in <module>
+    from tvb.simulator import models, integrators, monitors, coupling
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/monitors.py", line 64, in <module>
+    import tvb.datatypes.projections as projections_module
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/projections.py", line 47, in <module>
+    class ProjectionMatrix(HasTraits):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 121, in _post_bind_validate
+    'Consider using a lambda as a value factory \n   attribute {}'.format(self))
+Message: "Field seems mutable and has a default value. Consider using a lambda as a value factory \n   attribute tvb.datatypes.projections.ProjectionMatrix.conductances = Attr(field_type=<class 'dict'>, default={'air': 0.0, 'skin': 1.0, 'skull': 0.01, 'brain': 1.0}, required=False)"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 393, in doRollover
+    os.remove(dfn)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 5, in <module>
+    import montbrio_simulation
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 3, in <module>
+    import showcase1_ageing as utils
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/__init__.py", line 2, in <module>
+    from .phase_plane import phase_plane_interactive
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/phase_plane.py", line 6, in <module>
+    from tvb.simulator.lab import integrators
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/lab.py", line 57, in <module>
+    from tvb.simulator import (simulator, models, coupling, integrators, monitors, noise)
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 49, in <module>
+    from tvb.simulator import models, integrators, monitors, coupling
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/coupling.py", line 231, in <module>
+    class HyperbolicTangent(SparseCoupling):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 487, in _post_bind_validate
+    log.warning('{} \n   attribute  {}'.format(msg, self))
+Message: "default contains values out of the declared domain. Ex 1.0 \n   attribute  tvb.simulator.coupling.HyperbolicTangent.b = NArray(label=':math:`b`', dtype=float64, default=array([1.]), dim_names=(), ndim=None, required=True)"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 393, in doRollover
+    os.remove(dfn)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 5, in <module>
+    import montbrio_simulation
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 3, in <module>
+    import showcase1_ageing as utils
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/__init__.py", line 2, in <module>
+    from .phase_plane import phase_plane_interactive
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/phase_plane.py", line 6, in <module>
+    from tvb.simulator.lab import integrators
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/lab.py", line 57, in <module>
+    from tvb.simulator import (simulator, models, coupling, integrators, monitors, noise)
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 49, in <module>
+    from tvb.simulator import models, integrators, monitors, coupling
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/coupling.py", line 492, in <module>
+    class Kuramoto(SparseCoupling):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 487, in _post_bind_validate
+    log.warning('{} \n   attribute  {}'.format(msg, self))
+Message: "default contains values out of the declared domain. Ex 1.0 \n   attribute  tvb.simulator.coupling.Kuramoto.a = NArray(label=':math:`a`', dtype=float64, default=array([1.]), dim_names=(), ndim=None, required=True)"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 393, in doRollover
+    os.remove(dfn)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 5, in <module>
+    import montbrio_simulation
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 3, in <module>
+    import showcase1_ageing as utils
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/__init__.py", line 2, in <module>
+    from .phase_plane import phase_plane_interactive
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/phase_plane.py", line 6, in <module>
+    from tvb.simulator.lab import integrators
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/lab.py", line 57, in <module>
+    from tvb.simulator import (simulator, models, coupling, integrators, monitors, noise)
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 59, in <module>
+    class Simulator(HasTraits):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 118, in Simulator
+    default=models.Generic2dOscillator(),
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/__init__.py", line 142, in do_import
+    model_module = importlib.import_module(module_name)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/oscillator.py", line 41, in <module>
+    class Generic2dOscillator(ModelNumbaDfun):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 487, in _post_bind_validate
+    log.warning('{} \n   attribute  {}'.format(msg, self))
+Message: "default contains values out of the declared domain. Ex 1.0 \n   attribute  tvb.simulator.models.oscillator.Generic2dOscillator.gamma = NArray(label=':math:`\\\\gamma`', dtype=float64, default=array([1.]), dim_names=(), ndim=None, required=True)"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 118, in _post_bind_validate
+    hash(self.default)
+TypeError: unhashable type: 'dict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 393, in doRollover
+    os.remove(dfn)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 5, in <module>
+    import montbrio_simulation
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 3, in <module>
+    import showcase1_ageing as utils
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/__init__.py", line 2, in <module>
+    from .phase_plane import phase_plane_interactive
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/phase_plane.py", line 6, in <module>
+    from tvb.simulator.lab import integrators
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/lab.py", line 57, in <module>
+    from tvb.simulator import (simulator, models, coupling, integrators, monitors, noise)
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 59, in <module>
+    class Simulator(HasTraits):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 118, in Simulator
+    default=models.Generic2dOscillator(),
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/__init__.py", line 142, in do_import
+    model_module = importlib.import_module(module_name)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/oscillator.py", line 41, in <module>
+    class Generic2dOscillator(ModelNumbaDfun):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 121, in _post_bind_validate
+    'Consider using a lambda as a value factory \n   attribute {}'.format(self))
+Message: "Field seems mutable and has a default value. Consider using a lambda as a value factory \n   attribute tvb.simulator.models.oscillator.Generic2dOscillator.state_variable_range = Final(field_type=<class 'dict'>, default={'V': array([-2.,  4.]), 'W': array([-6.,  6.])}, required=True)"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 118, in _post_bind_validate
+    hash(self.default)
+TypeError: unhashable type: 'dict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 394, in doRollover
+    self.rotate(self.baseFilename, dfn)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 111, in rotate
+    os.rename(source, dest)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log' -> '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 5, in <module>
+    import montbrio_simulation
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 3, in <module>
+    import showcase1_ageing as utils
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/__init__.py", line 2, in <module>
+    from .phase_plane import phase_plane_interactive
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/phase_plane.py", line 6, in <module>
+    from tvb.simulator.lab import integrators
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/lab.py", line 57, in <module>
+    from tvb.simulator import (simulator, models, coupling, integrators, monitors, noise)
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 59, in <module>
+    class Simulator(HasTraits):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 118, in Simulator
+    default=models.Generic2dOscillator(),
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/__init__.py", line 142, in do_import
+    model_module = importlib.import_module(module_name)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/oscillator.py", line 400, in <module>
+    class Kuramoto(Model):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 121, in _post_bind_validate
+    'Consider using a lambda as a value factory \n   attribute {}'.format(self))
+Message: "Field seems mutable and has a default value. Consider using a lambda as a value factory \n   attribute tvb.simulator.models.oscillator.Kuramoto.state_variable_range = Final(field_type=<class 'dict'>, default={'theta': array([0.        , 6.28318531])}, required=True)"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 118, in _post_bind_validate
+    hash(self.default)
+TypeError: unhashable type: 'dict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 393, in doRollover
+    os.remove(dfn)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 5, in <module>
+    import montbrio_simulation
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 3, in <module>
+    import showcase1_ageing as utils
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/__init__.py", line 2, in <module>
+    from .phase_plane import phase_plane_interactive
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/phase_plane.py", line 6, in <module>
+    from tvb.simulator.lab import integrators
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/lab.py", line 57, in <module>
+    from tvb.simulator import (simulator, models, coupling, integrators, monitors, noise)
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 59, in <module>
+    class Simulator(HasTraits):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/simulator.py", line 118, in Simulator
+    default=models.Generic2dOscillator(),
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/__init__.py", line 142, in do_import
+    model_module = importlib.import_module(module_name)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/oscillator.py", line 495, in <module>
+    class SupHopf(ModelNumbaDfun):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 121, in _post_bind_validate
+    'Consider using a lambda as a value factory \n   attribute {}'.format(self))
+Message: "Field seems mutable and has a default value. Consider using a lambda as a value factory \n   attribute tvb.simulator.models.oscillator.SupHopf.state_variable_range = Final(field_type=<class 'dict'>, default={'x': array([-5.,  5.]), 'y': array([-5.,  5.])}, required=True)"
+Arguments: ()
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+--- Logging error ---
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 394, in doRollover
+    self.rotate(self.baseFilename, dfn)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 111, in rotate
+    os.rename(source, dest)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log' -> '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 72, in <module>
+    process_simulation(subject, noise, G, dt, sim_len, time_per_sim, job_ID, job_array_num, weights_file_pattern, results_file_pattern, FCD_file_pattern)
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 18, in process_simulation
+    p.start()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/process.py", line 112, in start
+    self._popen = self._Popen(self)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/context.py", line 277, in _Popen
+    return Popen(process_obj)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/popen_fork.py", line 74, in _launch
+    code = process_obj._bootstrap()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 11, in func
+    output = montbrio_simulation.process_sub(subject, noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern)
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 42, in process_sub
+    model = models.MontbrioPazoRoxin(
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/__init__.py", line 142, in do_import
+    model_module = importlib.import_module(module_name)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/infinite_theta.py", line 42, in <module>
+    class MontbrioPazoRoxin(Model):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 487, in _post_bind_validate
+    log.warning('{} \n   attribute  {}'.format(msg, self))
+Message: "default contains values out of the declared domain. Ex 1.0 \n   attribute  tvb.simulator.models.infinite_theta.MontbrioPazoRoxin.cr = NArray(label=':math:`cr`', dtype=float64, default=array([1.]), dim_names=(), ndim=None, required=True)"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 118, in _post_bind_validate
+    hash(self.default)
+TypeError: unhashable type: 'dict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 394, in doRollover
+    self.rotate(self.baseFilename, dfn)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 111, in rotate
+    os.rename(source, dest)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log' -> '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 72, in <module>
+    process_simulation(subject, noise, G, dt, sim_len, time_per_sim, job_ID, job_array_num, weights_file_pattern, results_file_pattern, FCD_file_pattern)
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 18, in process_simulation
+    p.start()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/process.py", line 112, in start
+    self._popen = self._Popen(self)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/context.py", line 277, in _Popen
+    return Popen(process_obj)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/popen_fork.py", line 74, in _launch
+    code = process_obj._bootstrap()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 11, in func
+    output = montbrio_simulation.process_sub(subject, noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern)
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 42, in process_sub
+    model = models.MontbrioPazoRoxin(
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/__init__.py", line 142, in do_import
+    model_module = importlib.import_module(module_name)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/infinite_theta.py", line 42, in <module>
+    class MontbrioPazoRoxin(Model):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 121, in _post_bind_validate
+    'Consider using a lambda as a value factory \n   attribute {}'.format(self))
+Message: "Field seems mutable and has a default value. Consider using a lambda as a value factory \n   attribute tvb.simulator.models.infinite_theta.MontbrioPazoRoxin.state_variable_range = Final(field_type=<class 'dict'>, default={'r': array([0., 2.]), 'V': array([-2. ,  1.5])}, required=True)"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 118, in _post_bind_validate
+    hash(self.default)
+TypeError: unhashable type: 'dict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 394, in doRollover
+    self.rotate(self.baseFilename, dfn)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 111, in rotate
+    os.rename(source, dest)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log' -> '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 72, in <module>
+    process_simulation(subject, noise, G, dt, sim_len, time_per_sim, job_ID, job_array_num, weights_file_pattern, results_file_pattern, FCD_file_pattern)
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 18, in process_simulation
+    p.start()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/process.py", line 112, in start
+    self._popen = self._Popen(self)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/context.py", line 277, in _Popen
+    return Popen(process_obj)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/popen_fork.py", line 74, in _launch
+    code = process_obj._bootstrap()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 11, in func
+    output = montbrio_simulation.process_sub(subject, noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern)
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 42, in process_sub
+    model = models.MontbrioPazoRoxin(
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/__init__.py", line 142, in do_import
+    model_module = importlib.import_module(module_name)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/infinite_theta.py", line 42, in <module>
+    class MontbrioPazoRoxin(Model):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 121, in _post_bind_validate
+    'Consider using a lambda as a value factory \n   attribute {}'.format(self))
+Message: "Field seems mutable and has a default value. Consider using a lambda as a value factory \n   attribute tvb.simulator.models.infinite_theta.MontbrioPazoRoxin.state_variable_boundaries = Final(field_type=<class 'dict'>, default={'r': array([ 0., inf])}, required=True)"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 118, in _post_bind_validate
+    hash(self.default)
+TypeError: unhashable type: 'list'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 70, in emit
+    self.doRollover()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/logging/handlers.py", line 393, in doRollover
+    os.remove(dfn)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/mgolmoha/.tvb-temp/logs/library.log.2025-12-07'
+Call stack:
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 72, in <module>
+    process_simulation(subject, noise, G, dt, sim_len, time_per_sim, job_ID, job_array_num, weights_file_pattern, results_file_pattern, FCD_file_pattern)
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 18, in process_simulation
+    p.start()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/process.py", line 112, in start
+    self._popen = self._Popen(self)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/context.py", line 277, in _Popen
+    return Popen(process_obj)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/popen_fork.py", line 74, in _launch
+    code = process_obj._bootstrap()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/single_sim_handler.py", line 11, in func
+    output = montbrio_simulation.process_sub(subject, noise, G, dt, sim_len, weights_file_pattern, FCD_file_pattern)
+  File "/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB/montbrio_simulation.py", line 42, in process_sub
+    model = models.MontbrioPazoRoxin(
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/__init__.py", line 142, in do_import
+    model_module = importlib.import_module(module_name)
+  File "/cvmfs/soft.computecanada.ca/gentoo/2020/usr/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/simulator/models/infinite_theta.py", line 42, in <module>
+    class MontbrioPazoRoxin(Model):
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_declarative_base.py", line 232, in __new__
+    v._post_bind_validate()
+  File "/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/basic/neotraits/_attr.py", line 121, in _post_bind_validate
+    'Consider using a lambda as a value factory \n   attribute {}'.format(self))
+Message: "Field seems mutable and has a default value. Consider using a lambda as a value factory \n   attribute tvb.simulator.models.infinite_theta.MontbrioPazoRoxin.coupling_terms = Final(field_type=<class 'list'>, default=['Coupling_Term_r', 'Coupling_Term_V'], required=True)"
+Arguments: ()
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.023419166 dt=0.005, Result=[0.0008866885217314815, 0.12736121684616555, 4.452448033465956, 40.20465540885925]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0235818723 dt=0.005, Result=[0.001976225439435624, 0.22288795269665454, 6.194853152785722, 40.42896032333374]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0237445786 dt=0.005, Result=[0.0008942969759886159, 0.2150693749771489, 7.3421045625748675, 40.51698422431946]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0239072849 dt=0.005, Result=[0.0020332784001383312, 0.14879289480068775, 5.1292898661169914, 40.61043453216553]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0240699912 dt=0.005, Result=[0.0013082630067914837, 0.12959546314463363, 0.31957463684589626, 40.3469123840332]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0242326975 dt=0.005, Result=[0.0037795085049492907, 0.1389173477955352, 4.1621979389325325, 40.29491710662842]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0243954038 dt=0.005, Result=[0.005984322024627271, 0.27548789296023674, 4.903047934312191, 40.837719202041626]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0245581101 dt=0.005, Result=[0.002152907851768197, 0.11968014609656588, 4.929185835204809, 41.3236448764801]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0247208164 dt=0.005, Result=[0.0014760647081882559, 0.07923625419776635, 2.448188078839607, 41.31293606758118]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0248835227 dt=0.005, Result=[0.0015213081215151188, 0.15084811262460507, 5.495740170835639, 41.06108093261719]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.025046229 dt=0.005, Result=[0.001280516984127638, 0.16821802346617964, 2.509818472484751, 40.95959186553955]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0252089353 dt=0.005, Result=[0.0015222233849143882, 0.13876475257315224, 1.2443881325719488, 41.02108097076416]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0253716416 dt=0.005, Result=[0.0009704398814498253, 0.2605085969479606, 4.615738253638995, 41.38662147521973]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0255343479 dt=0.005, Result=[0.0036357845252135345, 0.14555515554284768, 11.517727659583077, 41.17233109474182]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0256970542 dt=0.005, Result=[0.002332642306818616, 0.1659246067129788, 6.548772301171191, 41.16905212402344]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0258597605 dt=0.005, Result=[0.0024262980297911035, 0.19227109897014633, 5.345642009341731, 40.9652202129364]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0260224668 dt=0.005, Result=[0.0021604595801915996, 0.11844362654541538, 4.57700753685647, 41.29189729690552]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0261851731 dt=0.005, Result=[0.0026327500035971388, 0.18677947270760256, 3.11742861574999, 40.88604187965393]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0263478794 dt=0.005, Result=[0.0020349958294776367, 0.14829899515964468, 2.874434941972879, 40.69792699813843]
+[1;2;31mflexiblas BLAS backend  "AOCL" not found. Loading default (IMKL) instead.
+[0m/home/mgolmoha/TVB/env/lib/python3.7/site-packages/tvb/datatypes/surfaces.py:63: UserWarning: Geodesic distance module is unavailable; some functionality for surfaces will be unavailable.
+  warnings.warn(msg)
+tavg_to_bold step
+BOLD shape (T, N): 22 118
+/home/mgolmoha/TVB/virtual_ageing/showcase1_ageing/simulation.py:283: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return numpy.array([k1, k2, k3])
+Completed: subject=sub-0002 noise=0.04 G=2.0265105857 dt=0.005, Result=[0.0019575797983486347, 0.10884527200296043, 1.1387565999442248, 40.936025619506836]
