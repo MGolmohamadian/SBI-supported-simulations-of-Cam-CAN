@@ -66,6 +66,74 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     FCD, _ = utils.compute_fcd(bold_d[:,0,:,0], win_len=5)
     FCD_VAR_OV_vect= np.var(np.triu(FCD, k=5))
 
+    
+    # =============================================================
+    # compute FC from BOLD
+    # =============================================================
+    
+    bold_ts = bold_d[:, 0, :, 0]   # shape (T, N)
+    T, N = bold_ts.shape
+    print("BOLD shape (T, N):", T, N)
+
+    # FC matrix
+    FC = np.corrcoef(bold_ts.T)
+
+    # homotopic FC: pair region i with i+N/2
+    half = N // 2
+    homotopic_vals = FC[np.arange(half), np.arange(half) + half]
+    homotopic_mean = np.mean(homotopic_vals)
+
+    # =============================================================
+    # Compute FCD dynamics difference (σ_diff^2)
+    # =============================================================
+
+    # 1) We need sliding-window FC matrices
+    # utils.compute_fcd already computed the FCD matrix but not the FC windows.
+    # So compute them here manually.
+
+    win_len = 5  # same as in FCD computation
+    step = 1
+    T = bold_ts.shape[0]
+    N = bold_ts.shape[1]
+    n_windows = (T - win_len) // step + 1
+
+    FC_windows = []
+
+    for w in range(n_windows):
+        segment = bold_ts[w : w + win_len]
+        FCw = np.corrcoef(segment.T)
+        FC_windows.append(FCw)
+
+    FC_windows = np.array(FC_windows)  # shape (W, N, N)
+
+    # 2) Full-brain FCD upper triangle squared L2 norm
+    FCD_full = FCD  # already computed above
+    FCD_full_upper = FCD_full[np.triu_indices_from(FCD_full, k=1)]
+    norm_full = np.sum(FCD_full_upper ** 2)
+
+    # 3) Interhemispheric FCD (i <-> i+N/2)
+    half = N // 2
+    lh = np.arange(half)
+    rh = lh + half
+
+    # extract interhemispheric edges for each window
+    inter_vectors = np.array([FCw[lh, rh] for FCw in FC_windows])
+
+    # compute interhemispheric FCD
+    nW = inter_vectors.shape[0]
+    FCD_inter = np.zeros((nW, nW))
+
+    for i in range(nW):
+        for j in range(nW):
+            FCD_inter[i, j] = np.corrcoef(inter_vectors[i], inter_vectors[j])[0, 1]
+
+    FCD_inter_upper = FCD_inter[np.triu_indices_from(FCD_inter, k=1)]
+    norm_inter = np.sum(FCD_inter_upper ** 2)
+
+    # Final FCD dynamics difference
+    FCD_diff = norm_inter - norm_full
+ 
+    # =============================================================
     # Calculate time taken
     end_time = time.time()
     time_taken = end_time - start_time
@@ -74,4 +142,4 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     FCD_file=FCD_file_pattern.format(subject=subject,noise=my_noise,G=G,dt=dt)
     np.save(FCD_file, FCD)
 
-    return([FCD_VAR_OV_vect, time_taken])
+    return([FCD_VAR_OV_vect, homotopic_mean, FCD_diff, time_taken])
