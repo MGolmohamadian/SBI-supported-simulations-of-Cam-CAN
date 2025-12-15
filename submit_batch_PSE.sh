@@ -34,9 +34,9 @@ G_start=1.89
 G_end=2.21525
 num_G=2000
 
-noise_start=0.04
-noise_end=0.04
-num_noise=1
+noise_start=0.02
+noise_end=0.05
+num_noise=4
 
 dt=0.005
 
