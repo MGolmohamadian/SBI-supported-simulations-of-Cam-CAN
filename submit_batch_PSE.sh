@@ -6,7 +6,7 @@
 ### ====================================
 
 # Location of your submission script directory
-SUBMISSION_SCRIPT_DIR='/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB'
+SUBMISSION_SCRIPT_DIR='/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/SBI-practice/SBI-TVB'
 
 # List of subjects
 sublist="${SUBMISSION_SCRIPT_DIR}/subs.tsv"
@@ -32,10 +32,10 @@ log_dir="${SUBMISSION_SCRIPT_DIR}/logs"
 # Parameter ranges
 G_start=1.89
 G_end=2.21525
-num_G=2000
+num_G=2
 
-noise_start=0.04
-noise_end=0.04
+noise_start=0.03
+noise_end=0.03
 num_noise=1
 
 dt=0.005
@@ -44,7 +44,7 @@ dt=0.005
 sim_len='6e3'
 
 # Number of simulations per job
-num_sims_per_job=20
+num_sims_per_job=10
 
 # Time per simulation (seconds) - max amount of time you want your simulation script to run for - not to be confused with sim_len
 time_per_sim=200

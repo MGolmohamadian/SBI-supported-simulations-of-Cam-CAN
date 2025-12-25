@@ -1,6 +1,8 @@
 import sys, os, time
 import numpy as np
 import showcase1_ageing as utils
+sys.path.append("/home/mgolmoha/TVB/virtual_ageing")
+from showcase1_ageing.analysis import compute_fcd_filt, compute_fc, get_masks, compute_fcd
 from tvb.simulator.lab import *
 from tvb.simulator.backend.nb_mpr import NbMPRBackend
 import matplotlib.pyplot as plt
@@ -60,86 +62,81 @@ def process_sub(subject, my_noise, G, dt, sim_len, weights_file_pattern, FCD_fil
     bold_t, bold_d = utils.tavg_to_bold(tavg_t, tavg_d, tavg_period=1.,decimate=2000)
     print('tavg_to_bold step')
 
-    # cut the initial transient (16s)
+    # --------------------------------------------------
+    # Remove transient
+    # --------------------------------------------------
     bold_t = bold_t[8:]
     bold_d = bold_d[8:]
-    FCD, _ = utils.compute_fcd(bold_d[:,0,:,0], win_len=5)
-    FCD_VAR_OV_vect= np.var(np.triu(FCD, k=5))
 
-    
-    # =============================================================
-    # compute FC from BOLD
-    # =============================================================
-    
-    bold_ts = bold_d[:, 0, :, 0]   # shape (T, N)
-    T, N = bold_ts.shape
-    print("BOLD shape (T, N):", T, N)
+    ts = bold_d[:, 0, :, 0]     # [time, nodes]
+    n_samples, n_nodes = ts.shape
+    N = n_nodes
+    NHALF = N // 2
 
-    # FC matrix
-    FC = np.corrcoef(bold_ts.T)
-
-    # homotopic FC: pair region i with i+N/2
-    half = N // 2
-    homotopic_vals = FC[np.arange(half), np.arange(half) + half]
-    homotopic_mean = np.mean(homotopic_vals)
-
-    # =============================================================
-    # Compute FCD dynamics difference (σ_diff^2)
-    # =============================================================
-
-    # 1) We need sliding-window FC matrices
-    # utils.compute_fcd already computed the FCD matrix but not the FC windows.
-    # So compute them here manually.
-
-    win_len = 5  # same as in FCD computation
-    step = 1
-    T = bold_ts.shape[0]
-    N = bold_ts.shape[1]
-    n_windows = (T - win_len) // step + 1
-
-    FC_windows = []
-
-    for w in range(n_windows):
-        segment = bold_ts[w : w + win_len]
-        FCw = np.corrcoef(segment.T)
-        FC_windows.append(FCw)
-
-    FC_windows = np.array(FC_windows)  # shape (W, N, N)
-
-    # 2) Full-brain FCD upper triangle squared L2 norm
-    FCD_full = FCD  # already computed above
-    FCD_full_upper = FCD_full[np.triu_indices_from(FCD_full, k=1)]
-    norm_full = np.sum(FCD_full_upper ** 2)
-
-    # 3) Interhemispheric FCD (i <-> i+N/2)
-    half = N // 2
-    lh = np.arange(half)
-    rh = lh + half
-
-    # extract interhemispheric edges for each window
-    inter_vectors = np.array([FCw[lh, rh] for FCw in FC_windows])
-
-    # compute interhemispheric FCD
-    nW = inter_vectors.shape[0]
-    FCD_inter = np.zeros((nW, nW))
-
-    for i in range(nW):
-        for j in range(nW):
-            FCD_inter[i, j] = np.corrcoef(inter_vectors[i], inter_vectors[j])[0, 1]
-
-    FCD_inter_upper = FCD_inter[np.triu_indices_from(FCD_inter, k=1)]
-    norm_inter = np.sum(FCD_inter_upper ** 2)
-
-    # Final FCD dynamics difference
-    FCD_diff = norm_inter - norm_full
+    # --------------------------------------------------
+    # Feature A: Homotopic FC (paper)
+    # --------------------------------------------------
+    rsFC=compute_fc(bold_d)
+    HOMO_FC = np.mean(np.diag(rsFC, k=NHALF))
  
-    # =============================================================
-    # Calculate time taken
-    end_time = time.time()
-    time_taken = end_time - start_time
+    # --------------------------------------------------
+    # Full FCD
+    # --------------------------------------------------
+    FCD, _ = compute_fcd(ts, win_len=5)
 
-    #save FCD_file
-    FCD_file=FCD_file_pattern.format(subject=subject,noise=my_noise,G=G,dt=dt)
-    np.save(FCD_file, FCD)
+    # --------------------------------------------------
+    # Interhemispheric FCD
+    # --------------------------------------------------
+    _, inter_mask = get_masks(N)
+    FCD_inter, fc_stack_inter, _ = compute_fcd_filt(ts, inter_mask, win_len=5)
 
-    return([FCD_VAR_OV_vect, homotopic_mean, FCD_diff, time_taken])
+    # --------------------------------------------------
+    # Feature B: FCD variance (TWO methods)
+    # --------------------------------------------------
+
+    # B1 — Your original (statistical variance)
+    FCD_VAR_OV_vect = np.var(np.triu(FCD, k=5))
+    FCD_VAR_OV_INTER_vect = np.var(np.triu(FCD_inter, k=5))
+    FCD_DIFF_VAR = FCD_VAR_OV_INTER_vect - FCD_VAR_OV_vect
+
+    # B2 — Paper-accurate (Frobenius norm squared)
+    FCD_VAR_OV_FROB = np.sum(np.triu(FCD, k=5) ** 2)
+    FCD_VAR_OV_INTER_FROB = np.sum(np.triu(FCD_inter, k=5) ** 2)
+    FCD_DIFF_FROB = FCD_VAR_OV_INTER_FROB - FCD_VAR_OV_FROB
+
+    # --------------------------------------------------
+    # Feature C: Interhemispheric FC variability (TWO methods)
+    # --------------------------------------------------
+
+    # C1 — Your original (global std)
+    INTER_FC_STD_GLOBAL = np.std(fc_stack_inter)
+
+    # C2 — Paper-accurate (edge-wise temporal SD)
+    edgewise_std = np.std(fc_stack_inter, axis=0)
+    INTER_FC_STD_EDGEWISE = np.mean(edgewise_std)
+
+    # --------------------------------------------------
+    # Save FCD
+    # --------------------------------------------------
+    #FCD_file = FCD_file_pattern.format(
+    #    subject=subject, noise=my_noise, G=G, dt=dt)
+    #np.save(FCD_file, FCD)
+
+    # --------------------------------------------------
+    # Time
+    # --------------------------------------------------
+   # time_taken = time.time() - start_time
+
+    # --------------------------------------------------
+    # Return ALL outputs
+    # -------------------------------------------------
+
+
+    # FCD matrices
+#   ts_shape=ts.shape
+    rsFC_shape= rsFC.shape
+    FCD_shape=FCD.shape
+    FCD_inter_shape=FCD_inter.shape
+
+    return([HOMO_FC, FCD_DIFF_FROB, INTER_FC_STD_EDGEWISE, FCD_DIFF_VAR, INTER_FC_STD_GLOBAL, FCD_shape[0], FCD_shape[1], FCD_inter_shape[0], FCD_inter_shape[1],  rsFC_shape[0],  rsFC_shape[1], NHALF])
+

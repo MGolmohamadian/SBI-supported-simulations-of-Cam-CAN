@@ -11,7 +11,7 @@
 ### ====================================
 
 # Location of your submission script directory
-SUBMISSION_SCRIPT_DIR='/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/Session_7-SBI/SBI-TVB'
+SUBMISSION_SCRIPT_DIR='/scratch/mgolmoha/TVB_Brown_Bag/tvb_study_group/SBI-practice/SBI-TVB'
 
 # Load in env
 module load scipy-stack
